@@ -3,3 +3,7 @@
 ################################################################################
 
 /GraphQl.Api/obj
+/GraphQl.Core/obj/Debug/netcoreapp3.1/GraphQl.Core.AssemblyInfo.cs
+/.vs/GraphQl.Api/v16/Server/sqlite3
+/GraphQl.Core/obj
+/GraphQl.Infrastructure/obj
