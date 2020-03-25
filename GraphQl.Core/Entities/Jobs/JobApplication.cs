@@ -5,9 +5,11 @@ using GraphQl.Core.Entities.Users;
 
 namespace GraphQl.Core.Entities.Jobs
 {
-    public class JobApplicant : EntityBase
+    public class JobApplication : EntityBase
     {
         public int JobId { get; set; }
+        public Job Job { get; set; }
         public string ApplicantId { get; set; }
+        public Applicant Applicant { get; set; }
     }
 }

@@ -7,3 +7,8 @@
 /.vs/GraphQl.Api/v16/Server/sqlite3
 /GraphQl.Core/obj
 /GraphQl.Infrastructure/obj
+/.vs/GraphQl.Api/v16
+/.vs
+/GraphQl.Api/bin/Debug/netcoreapp3.1
+/GraphQl.Infrastructure/bin/Debug/netcoreapp3.1
+/GraphQl.Api.sln.DotSettings.user
