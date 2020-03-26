@@ -7,7 +7,7 @@ namespace GraphQl.Core.Values
     public enum JobStatus
     {
         Draft,
-        Published,
+        Posted,
         Archived,
         Deleted
     }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using GraphQl.Core.Entities.Jobs;
+using GraphQl.Core.Entities.Job;
 
 namespace GraphQl.Core.Entities.Users
 {

@@ -12,8 +12,8 @@ namespace GraphQl.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    ModifiedOn = table.Column<DateTime>(nullable: false),
+                    Created = table.Column<DateTime>(nullable: false),
+                    Modified = table.Column<DateTime>(nullable: true),
                     FullName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -26,8 +26,8 @@ namespace GraphQl.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    ModifiedOn = table.Column<DateTime>(nullable: false),
+                    Created = table.Column<DateTime>(nullable: false),
+                    Modified = table.Column<DateTime>(nullable: true),
                     FullName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -41,8 +41,8 @@ namespace GraphQl.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    ModifiedOn = table.Column<DateTime>(nullable: false),
+                    Created = table.Column<DateTime>(nullable: false),
+                    Modified = table.Column<DateTime>(nullable: true),
                     EmployerId = table.Column<string>(nullable: true),
                     JobTitle = table.Column<string>(nullable: true),
                     JobDescription = table.Column<string>(nullable: true),
@@ -62,8 +62,8 @@ namespace GraphQl.Infrastructure.Migrations
                 {
                     JobId = table.Column<int>(nullable: false),
                     ApplicantId = table.Column<string>(nullable: false),
-                    CreatedOn = table.Column<DateTime>(nullable: false),
-                    ModifiedOn = table.Column<DateTime>(nullable: false)
+                    Created = table.Column<DateTime>(nullable: false),
+                    Modified = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {

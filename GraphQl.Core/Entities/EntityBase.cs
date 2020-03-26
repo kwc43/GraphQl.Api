@@ -6,7 +6,8 @@ namespace GraphQl.Core.Entities
 {
     public class EntityBase
     {
-        public DateTime CreatedOn { get; set; }
-        public DateTime ModifiedOn { get; set; }
+        public DateTime Created { get; set; }
+
+        public DateTime? Modified { get; set; }
     }
 }
