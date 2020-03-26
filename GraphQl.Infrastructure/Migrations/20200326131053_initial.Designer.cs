@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GraphQl.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200326001937_initial")]
+    [Migration("20200326131053_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace GraphQl.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("GraphQl.Core.Entities.Job.Job", b =>
+            modelBuilder.Entity("GraphQl.Core.Entities.Jobs.Job", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -63,7 +63,7 @@ namespace GraphQl.Infrastructure.Migrations
                     b.ToTable("Jobs");
                 });
 
-            modelBuilder.Entity("GraphQl.Core.Entities.Job.JobApplication", b =>
+            modelBuilder.Entity("GraphQl.Core.Entities.Jobs.JobApplication", b =>
                 {
                     b.Property<int>("JobId")
                         .HasColumnType("int");
@@ -81,7 +81,7 @@ namespace GraphQl.Infrastructure.Migrations
 
                     b.HasIndex("ApplicantId");
 
-                    b.ToTable("JobApplicants");
+                    b.ToTable("JobApplications");
                 });
 
             modelBuilder.Entity("GraphQl.Core.Entities.Users.Applicant", b =>
@@ -122,7 +122,7 @@ namespace GraphQl.Infrastructure.Migrations
                     b.ToTable("Employers");
                 });
 
-            modelBuilder.Entity("GraphQl.Core.Entities.Job.JobApplication", b =>
+            modelBuilder.Entity("GraphQl.Core.Entities.Jobs.JobApplication", b =>
                 {
                     b.HasOne("GraphQl.Core.Entities.Users.Applicant", "Applicant")
                         .WithMany("JobApplications")
@@ -130,7 +130,7 @@ namespace GraphQl.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("GraphQl.Core.Entities.Job.Job", "Job")
+                    b.HasOne("GraphQl.Core.Entities.Jobs.Job", "Job")
                         .WithMany("JobApplications")
                         .HasForeignKey("JobId")
                         .OnDelete(DeleteBehavior.Cascade)

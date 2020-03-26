@@ -10,6 +10,7 @@ namespace GraphQl.Core.Entities.Jobs
     {
         public int Id { get; private set; }
         public string EmployerId { get; private set; }
+        public Employer Employer { get; private set; }
         public string JobTitle { get; private set; }
         public string JobDescription { get; private set; }
         public string JobLocation { get; private set; }

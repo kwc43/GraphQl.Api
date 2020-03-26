@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using GraphQL.Types;
 
 namespace GraphQl.Infrastructure.GraphQl.Mutations
 {
-    class JobStackMutations
+    public class JobStackMutations : ObjectGraphType
     {
     }
 }

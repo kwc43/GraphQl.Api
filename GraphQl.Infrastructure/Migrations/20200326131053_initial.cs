@@ -57,7 +57,7 @@ namespace GraphQl.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "JobApplicants",
+                name: "JobApplications",
                 columns: table => new
                 {
                     JobId = table.Column<int>(nullable: false),
@@ -67,15 +67,15 @@ namespace GraphQl.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_JobApplicants", x => new { x.JobId, x.ApplicantId });
+                    table.PrimaryKey("PK_JobApplications", x => new { x.JobId, x.ApplicantId });
                     table.ForeignKey(
-                        name: "FK_JobApplicants_Applicants_ApplicantId",
+                        name: "FK_JobApplications_Applicants_ApplicantId",
                         column: x => x.ApplicantId,
                         principalTable: "Applicants",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_JobApplicants_Jobs_JobId",
+                        name: "FK_JobApplications_Jobs_JobId",
                         column: x => x.JobId,
                         principalTable: "Jobs",
                         principalColumn: "Id",
@@ -83,8 +83,8 @@ namespace GraphQl.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_JobApplicants_ApplicantId",
-                table: "JobApplicants",
+                name: "IX_JobApplications_ApplicantId",
+                table: "JobApplications",
                 column: "ApplicantId");
         }
 
@@ -94,7 +94,7 @@ namespace GraphQl.Infrastructure.Migrations
                 name: "Employers");
 
             migrationBuilder.DropTable(
-                name: "JobApplicants");
+                name: "JobApplications");
 
             migrationBuilder.DropTable(
                 name: "Applicants");
